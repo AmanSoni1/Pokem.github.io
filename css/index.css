@@ -1,0 +1,37 @@
+
+.up2 {
+    position:fixed;
+    top: 350px;
+    right: 0;
+    bottom: 0;
+    left: 900px;
+    padding: 0;
+    border: 0;
+}
+.down2 {
+    position: fixed;
+    top: 450px;
+    right: 0;
+    bottom: 0;
+    left: 900px;
+    padding: 0;
+    border: 0;
+}
+.left2 {
+    position: fixed;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 850px;
+    padding: 0;
+    border: 0;
+}
+.right2 {
+    position: fixed;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 950px;
+    padding: 0;
+    border: 0;
+}
