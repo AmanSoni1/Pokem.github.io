@@ -9,15 +9,31 @@
         body {
             background-color: black;
             margin: 0px;
+            z-index: 0;
         }
-    </style>
+    </style> 
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+    <div style="display: inline-block;">
+    <button class="up2" id="u" style="width: 50px; height: 51px ;">
+    <img src="./img/Up.png" width="50px" height="50px"/>
+</button>
+    <button class="down2" id="d" style="width: 50px; height: 50px">
+    <img src="./img/down.png" width="50px" height="50px"/>
+</button>
+    <button class="left2" id="l" style="width: 50px; height: 50px">
+    <img src="./img/left.png" width="50px" height="50px"/>
+</button>
+    <button class="right2" id="r" style="width: 50px; height: 50px">
+    <img src="./img/right.png" width="50px" height="50px"/>
+</button>
+</div>
     <canvas>
+    </canvas>
+        <script src="data/door.js"></script>
         <script src="data/collision.js"></script>
         <script src="classes.js"></script>
         <script src="index.js"></script>
-        
-    </canvas>
 </body>
 </html>
