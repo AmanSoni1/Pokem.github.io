@@ -443,29 +443,29 @@ const RIGHT = document.getElementById('r')
 
 
 
-    UP.addEventListener('mousedown',function(){
+    UP.addEventListener('touchstart',function(){
         keys.w.pressed = true
 })
-    DOWN.addEventListener('mousedown',function(){
+    DOWN.addEventListener('touchstart',function(){
         keys.s.pressed = true
 })
-    LEFT.addEventListener('mousedown',function(){
+    LEFT.addEventListener('touchstart',function(){
         keys.a.pressed = true
 })
-    RIGHT.addEventListener('mousedown',function(){
+    RIGHT.addEventListener('touchstart',function(){
         keys.d.pressed = true
 })
 
 
-UP.addEventListener('mouseup',function(){
+UP.addEventListener('touchend',function(){
     keys.w.pressed = false
 })
-DOWN.addEventListener('mouseup',function(){
+DOWN.addEventListener('touchend',function(){
     keys.s.pressed = false
 })
-LEFT.addEventListener('mouseup',function(){
+LEFT.addEventListener('touchend',function(){
     keys.a.pressed = false
 })
-RIGHT.addEventListener('mouseup',function(){
+RIGHT.addEventListener('touchend',function(){
     keys.d.pressed = false
 })
