@@ -8,7 +8,7 @@
     padding: 0;
     border: 0;
     touch-action: none;
-    border-radius: 40%;
+    border-radius: 50%;
 }
 .down2 {
     position: fixed;
@@ -19,7 +19,7 @@
     padding: 0;
     border: 0;
     touch-action: none;
-    border-radius: 40%;
+    border-radius: 50%;
 }
 .left2 {
     position: fixed;
@@ -30,7 +30,7 @@
     padding: 0;
     border: 0;
     touch-action: none;
-    border-radius: 40%;
+    border-radius: 50%;
 }
 .right2 {
     position: fixed;
@@ -41,5 +41,5 @@
     padding: 0;
     border: 0;
     touch-action: none;
-    border-radius: 40%;
+    border-radius: 50%;
 }
