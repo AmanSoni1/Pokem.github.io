@@ -4,7 +4,7 @@ const c = canvas.getContext('2d') //c for context it is an API, I can draw anyth
 
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = 576;
 const doorMap = []
 for(let i=0; i<door.length; i+=60){
     doorMap.push(door.slice(i,60+i))
