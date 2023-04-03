@@ -9,8 +9,14 @@ const doorMap = []
 for(let i=0; i<door.length; i+=60){
     doorMap.push(door.slice(i,60+i))
 }
+const doorMap1 = []
+for(let i=0; i<door1.length; i+=60){
+    doorMap1.push(door1.slice(i,60+i))
+}
+
+
  
-console.log(doorMap)
+// console.log(doorMap1)
 const boundaries = []
 const offset = {
     x:-70,
@@ -35,6 +41,10 @@ collisionsMap.forEach((row, i) =>{
     })
 })
 const doorr = []
+const doorr1 = []
+const doorr2 = []
+const doorr3 = []
+const doorr4 = []
 
 doorMap.forEach((row, i) =>{
     row.forEach((symbol, j) => {
@@ -47,9 +57,60 @@ doorMap.forEach((row, i) =>{
                 }
             })
         )
+        if(symbol === 2)
+        doorr1.push(
+            new Boundary( {
+                position: {
+                    x: j*Boundary.width + offset.x,
+                    y: i*Boundary.height + offset.y
+                }
+            })
+        )
+        if(symbol === 3)
+        doorr2.push(
+            new Boundary( {
+                position: {
+                    x: j*Boundary.width + offset.x,
+                    y: i*Boundary.height + offset.y
+                }
+            })
+        )
+        if(symbol === 4)
+        doorr3.push(
+            new Boundary( {
+                position: {
+                    x: j*Boundary.width + offset.x,
+                    y: i*Boundary.height + offset.y
+                }
+            })
+        )
+        if(symbol === 5)
+        doorr4.push(
+            new Boundary( {
+                position: {
+                    x: j*Boundary.width + offset.x,
+                    y: i*Boundary.height + offset.y
+                }
+            })
+        )
     })
 })
-console.log(doorr)
+
+// doorMap1.forEach((row, i) =>{
+//     row.forEach((symbol, j) => {
+//         if(symbol === 1)
+//         doorr1.push(
+//             new Boundary( {
+//                 position: {
+//                     x: j*Boundary.width + offset.x,
+//                     y: i*Boundary.height + offset.y
+//                 }
+//             })
+//         )
+//     })
+// })
+// console.log(doorr1)
+
 // console.log(boundaries)
 //1. Map Creation
 const image = new Image()
@@ -58,6 +119,11 @@ const playerUp = new Image()
 const playerLeft = new Image()
 const playerRight = new Image()
 const foreground1 = new Image()
+const form = new Image()
+const form1 = new Image()
+const form2 = new Image()
+const form3 = new Image()
+const form4 = new Image()
 // const up = new Image()
 // const down = new Image()
 // const left = new Image()
@@ -68,6 +134,11 @@ playerUp.src = "./img/playerUp.png"
 playerLeft.src = "./img/playerLeft.png"
 playerRight.src = "./img/playerRight.png"
 foreground1.src = './img/foreground.png'
+form.src = './img/980.png'
+form1.src = './img/970.png'
+form2.src = './img/960.png'
+form3.src = './img/950.png'
+form4.src = './img/940.png'
 // up.src = "./img/Up.png"
 // down.src = "./img/down.png"
 // left.src = "./img/left.png"
@@ -106,6 +177,41 @@ const foreground = new Sprite({
         y: offset.y
     },
     image: foreground1
+})
+const forum = new Sprite({
+    position: {
+        x: 30,
+        y: 50
+    },
+    image: form
+})
+const forum1 = new Sprite({
+    position: {
+        x: 30,
+        y: 50
+    },
+    image: form1
+})
+const forum2 = new Sprite({
+    position: {
+        x: 30,
+        y: 50
+    },
+    image: form2
+})
+const forum3 = new Sprite({
+    position: {
+        x: 30,
+        y: 50
+    },
+    image: form3
+})
+const forum4 = new Sprite({
+    position: {
+        x: 30,
+        y: 50
+    },
+    image: form4
 })
 // const up1 = new direction({
 //     position1: {
@@ -171,7 +277,7 @@ const keys = {
 }
 
 
-const movables = [background, ...boundaries, foreground,...doorr]
+const movables = [background, ...boundaries, foreground,...doorr,...doorr1,...doorr2,...doorr3,...doorr4]
 
 function rectangleCollision({ rectangle1, rectangle2}){
     return(
@@ -181,9 +287,24 @@ function rectangleCollision({ rectangle1, rectangle2}){
         rectangle1.position.y + rectangle1.height >= rectangle2.position.y
     )
 }
-const indoor = {
+
+const indoor1 = {
     initiated: false
 }
+const indoor2 = {
+    initiated: false
+}
+const indoor3 = {
+    initiated: false
+}
+const indoor4 = {
+    initiated: false
+}
+const indoor5 = {
+    initiated: false
+}
+let flag = false
+
 function animate(){
     window.requestAnimationFrame(animate)   //recursion
     background.draw();
@@ -200,25 +321,150 @@ function animate(){
     })
     player.draw()
     foreground.draw()
-
-    if(indoor.initiated) return
+    
     let moving = true
+
+    if(indoor1.initiated){
+        if(enkey%2 === 0){
+       
+            indoor1.initiated = false;
+            flag=true;
+            moving = true
+        }
+        forum.draw1()
+            moving = false
+        
+    }
+    if(indoor2.initiated){
+        if(enkey%2 === 0){
+       
+            indoor2.initiated = false;
+            flag=true;
+            moving = true
+        }
+        forum1.draw1()
+            moving = false
+        
+    }
+    if(indoor3.initiated){
+        if(enkey%2 === 0){
+       
+            indoor3.initiated = false;
+            flag=true;
+            moving = true
+        }
+        forum2.draw1()
+            moving = false
+        
+    }
+    if(indoor4.initiated){
+        if(enkey%2 === 0){
+       
+            indoor4.initiated = false;
+            flag=true;
+            moving = true
+        }
+        forum3.draw1()
+                    moving = false
+        
+    }
+    if(indoor5.initiated){
+        if(enkey%2 === 0){
+       
+            indoor5.initiated = false;
+            flag=true;
+            moving = true
+        }
+        forum4.draw1()
+            moving = false
+        
+    }
+
     player.moving = false
     if(keys.Enter.pressed){
         for (let i=0; i < boundaries.length; i++) {
+            try {
             const dor = doorr[i]
+            const dor1 = doorr1[i]  
+            const dor2 = doorr2[i]  
+            const dor3 = doorr3[i]  
+            const dor4 = doorr4[i]  
             if(
                 rectangleCollision({
                     rectangle1: player,
                     rectangle2: dor
                 })
                  ){
-                console.log('Door')
-                indoor.initiated = true
+                console.log('Door1')
+                if(!flag)
+                indoor1.initiated = true
+                flag = false
+                console.log(dor)
                 break
             }
+            else if(
+                rectangleCollision({
+                    rectangle1: player,
+                    rectangle2: dor1
+                })
+                 ){
+                console.log('Door2')
+                if(!flag)
+                indoor2.initiated = true
+                flag = false
+                console.log(dor1)
+                break
+            }
+            else if(
+                rectangleCollision({
+                    rectangle1: player,
+                    rectangle2: dor2
+                })
+                 ){
+                console.log('Door2')
+                if(!flag)
+                indoor3.initiated = true
+                flag = false
+                console.log(dor1)
+                break
+            }
+            else if(
+                rectangleCollision({
+                    rectangle1: player,
+                    rectangle2: dor3
+                })
+                 ){
+                console.log('Door2')
+                if(!flag)
+                indoor4.initiated = true
+                flag = false
+                console.log(dor1)
+                break
+            }
+            else if(
+                rectangleCollision({
+                    rectangle1: player,
+                    rectangle2: dor4
+                })
+                 ){
+                console.log('Door2')
+                if(!flag)
+                indoor5.initiated = true
+                flag = false
+                console.log(dor1)
+                break
+            }
+            
+            
+            } catch (error) {
+                return
+            }
+                
         }
+      
     }
+    
+    
     if (keys.w.pressed || keys.ArrowUp.pressed && (lastkey ==='w' || lastkey ==='ArrowUp' )) {
        player.moving =true
        player.image = player.sprites.up
@@ -342,11 +588,9 @@ function animate(){
     }
 }
 
-// if(keys.w.pressed) {
-//     background.position.y = background.position.y - 3
-// }
 animate()
 lastkey = ''
+let enkey = 0
 window.addEventListener('keydown', (e) =>{
     // console.log(e.key)
     switch(e.key) {
@@ -391,9 +635,10 @@ window.addEventListener('keydown', (e) =>{
             break
         case 'Enter':
             keys.Enter.pressed = true
+            enkey = enkey + 1
             break
     }
-    // console.log(e.key)
+    console.log(enkey)
 })
 window.addEventListener('keyup', (e) =>{
     // console.log(e.key)
@@ -429,17 +674,19 @@ window.addEventListener('keyup', (e) =>{
         case 'Shift':
             keys.Shift.pressed = false
             break
-            case 'Enter':
-                keys.Enter.pressed = false
-                break
+        case 'Enter':
+            keys.Enter.pressed = false
+            break
     }
+    
     // console.log(keys)
 })
-
 const UP = document.getElementById('u')
 const DOWN = document.getElementById('d')
 const LEFT = document.getElementById('l')
 const RIGHT = document.getElementById('r')
+const ENTER = document.getElementById('f')
+const SHIFT = document.getElementById('s')
 
 
 
@@ -455,6 +702,14 @@ const RIGHT = document.getElementById('r')
     RIGHT.addEventListener('touchstart',function(){
         keys.d.pressed = true
 })
+    ENTER.addEventListener('touchstart',function(){
+        keys.Enter.pressed = true
+        enkey = enkey + 1
+})
+    SHIFT.addEventListener('touchstart',function(){
+        keys.Shift.pressed = true
+        
+})
 
 
 UP.addEventListener('touchend',function(){
@@ -468,4 +723,11 @@ LEFT.addEventListener('touchend',function(){
 })
 RIGHT.addEventListener('touchend',function(){
     keys.d.pressed = false
+})
+ENTER.addEventListener('touchend',function(){
+    keys.Enter.pressed = false
+})
+SHIFT.addEventListener('touchend',function(){
+    keys.Shift.pressed = false
+    
 })
