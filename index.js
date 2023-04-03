@@ -9,10 +9,10 @@ const doorMap = []
 for(let i=0; i<door.length; i+=60){
     doorMap.push(door.slice(i,60+i))
 }
-const doorMap1 = []
-for(let i=0; i<door1.length; i+=60){
-    doorMap1.push(door1.slice(i,60+i))
-}
+// const doorMap1 = []
+// for(let i=0; i<door1.length; i+=60){
+//     doorMap1.push(door1.slice(i,60+i))
+// }
 
 
  
@@ -96,20 +96,7 @@ doorMap.forEach((row, i) =>{
     })
 })
 
-// doorMap1.forEach((row, i) =>{
-//     row.forEach((symbol, j) => {
-//         if(symbol === 1)
-//         doorr1.push(
-//             new Boundary( {
-//                 position: {
-//                     x: j*Boundary.width + offset.x,
-//                     y: i*Boundary.height + offset.y
-//                 }
-//             })
-//         )
-//     })
-// })
-// console.log(doorr1)
+
 
 // console.log(boundaries)
 //1. Map Creation
