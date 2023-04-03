@@ -20,8 +20,8 @@ class Sprite {
         this.image.onload = () => {
         this.width = this.image.width / this.frames.max
         this.height = this.image.height
-        console.log(this.width);
-        console.log(this.height);
+        // console.log(this.width);
+        // console.log(this.height);
         }
         this.moving = false
         this.sprites = sprites
@@ -51,5 +51,14 @@ class Sprite {
             }
     
     }
+    draw1(){
+        c.drawImage(
+        this.image,
+        this.position.x,
+        this.position.y,
+        this.image.width=300,
+        this.image.height=300,
+        )
+        }
+   
 }
-
