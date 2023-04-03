@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d') //c for context it is an API, I can draw anything from this
-// console.log(door)
+
 
 
 canvas.width = 1024
@@ -9,14 +9,7 @@ const doorMap = []
 for(let i=0; i<door.length; i+=60){
     doorMap.push(door.slice(i,60+i))
 }
-// const doorMap1 = []
-// for(let i=0; i<door1.length; i+=60){
-//     doorMap1.push(door1.slice(i,60+i))
-// }
 
-
- 
-// console.log(doorMap1)
 const boundaries = []
 const offset = {
     x:-70,
