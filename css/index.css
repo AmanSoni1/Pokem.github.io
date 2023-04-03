@@ -4,7 +4,7 @@
     top: 350px;
     right: 0;
     bottom: 0;
-    left: 900px;
+    left: 100px;
     padding: 0;
     border: 0;
     touch-action: none;
@@ -15,7 +15,7 @@
     top: 450px;
     right: 0;
     bottom: 0;
-    left: 900px;
+    left: 100px;
     padding: 0;
     border: 0;
     touch-action: none;
@@ -26,7 +26,7 @@
     top: 400px;
     right: 0;
     bottom: 0;
-    left: 850px;
+    left: 50px;
     padding: 0;
     border: 0;
     touch-action: none;
@@ -37,7 +37,29 @@
     top: 400px;
     right: 0;
     bottom: 0;
-    left: 950px;
+    left: 150px;
+    padding: 0;
+    border: 0;
+    touch-action: none;
+    border-radius: 50%;
+}
+.fist {
+    position: fixed;
+    top: 350px;
+    right: 0;
+    bottom: 0;
+    left: 900px;
+    padding: 0;
+    border: 0;
+    touch-action: none;
+    border-radius: 50%;
+}
+.sprint {
+    position: fixed;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 850px;
     padding: 0;
     border: 0;
     touch-action: none;
