@@ -195,34 +195,7 @@ const forum4 = new Sprite({
     },
     image: form4
 })
-// const up1 = new direction({
-//     position1: {
-//         x: offset.x,
-//         y: offset.y
-//     },
-//     image: up
-// })
-// const down1 = new direction({
-//     position: {
-//         x: offset.x,
-//         y: offset.y
-//     },
-//     image: down
-// })
-// const left1 = new direction({
-//     position: {
-//         x: offset.x,
-//         y: offset.y
-//     },
-//     image: left
-// })
-// const right1 = new direction({
-//     position: {
-//         x: offset.x,
-//         y: offset.y
-//     },
-//     image: right
-// })
+
 const keys = {
     w: {
         pressed: false
