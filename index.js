@@ -1,8 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d') //c for context it is an API, I can draw anything from this
-
-
-
+// console.log(door)
+//door1
 canvas.width = 1024;
 canvas.height = 576;
 const doorMap = []
@@ -10,6 +9,10 @@ for(let i=0; i<door.length; i+=60){
     doorMap.push(door.slice(i,60+i))
 }
 
+
+
+ 
+// console.log(doorMap1)
 const boundaries = []
 const offset = {
     x:-70,
@@ -88,7 +91,6 @@ doorMap.forEach((row, i) =>{
         )
     })
 })
-
 
 
 // console.log(boundaries)
@@ -284,14 +286,26 @@ const indoor5 = {
     initiated: false
 }
 let flag = false
-
+let flag1 = false
+let flag2 = false
+let flag3 = false
+let flag4 = false
+let flag5 = false
+let scor = 0
+const SCORE = document.getElementById('score')
+const WON = document.getElementById('won')
 function animate(){
+    if(scor === 250)
+    {
+        WON.innerHTML = "Congratulation Folks <br/> You Won!!"
+        while(1)
+        {
+            moving = false
+        }
+    }
     window.requestAnimationFrame(animate)   //recursion
     background.draw();
-    // up1.drawup()
-    // down1.drawdown()
-    // left1.drawleft()
-    // right1.drawright()
+    SCORE.innerHTML = scor
     
     boundaries.forEach(boundary => {
         boundary.draw()
@@ -311,6 +325,10 @@ function animate(){
             flag=true;
             moving = true
         }
+        while(!flag1){
+            scor = scor +50
+            flag1 = true
+        }
         forum.draw1()
             moving = false
         
@@ -321,6 +339,10 @@ function animate(){
             indoor2.initiated = false;
             flag=true;
             moving = true
+        }
+        while(!flag2){
+            scor = scor +50
+            flag2 = true
         }
         forum1.draw1()
             moving = false
@@ -333,6 +355,10 @@ function animate(){
             flag=true;
             moving = true
         }
+        while(!flag3){
+            scor = scor +50
+            flag3 = true
+        }
         forum2.draw1()
             moving = false
         
@@ -344,6 +370,10 @@ function animate(){
             flag=true;
             moving = true
         }
+        while(!flag4){
+            scor = scor +50
+            flag4 = true
+        }
         forum3.draw1()
                     moving = false
         
@@ -354,6 +384,10 @@ function animate(){
             indoor5.initiated = false;
             flag=true;
             moving = true
+        }
+        while(!flag5){
+            scor = scor +50
+            flag5 = true
         }
         forum4.draw1()
             moving = false
@@ -377,6 +411,7 @@ function animate(){
                  ){
                 console.log('Door1')
                 if(!flag)
+                // flag1 = true
                 indoor1.initiated = true
                 flag = false
                 console.log(dor)
@@ -667,7 +702,6 @@ const LEFT = document.getElementById('l')
 const RIGHT = document.getElementById('r')
 const ENTER = document.getElementById('f')
 const SHIFT = document.getElementById('s')
-
 
 
     UP.addEventListener('touchstart',function(){
