@@ -1,7 +1,11 @@
 canvas {
     position: relative;
 }
-
+body {
+    position: fixed;
+    top: 10%;
+    left: 15%;
+}
 .up2 {
     display: none;
     position:absolute;
@@ -75,7 +79,7 @@ canvas {
     border-radius: 50%;
 }
 
-@media screen and (min-width: 1550px) {
+/* @media screen and (min-width: 1550px) {
     body {
         position: absolute;
         top: 28%;
@@ -100,4 +104,4 @@ canvas {
     .fist{
         display: inline-block;
     }
-}
+} */
