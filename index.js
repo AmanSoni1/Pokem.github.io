@@ -268,6 +268,7 @@ let scor = 0
 const SCORE = document.getElementById('score')
 const WON = document.getElementById('won')
 function animate(){
+    SCORE.innerHTML = `Score: ${scor}`
     if(scor === 250)
     {
         WON.innerHTML = "Congratulation Folks <br/> You Won!!"
@@ -278,7 +279,7 @@ function animate(){
     }
     window.requestAnimationFrame(animate)   //recursion
     background.draw();
-    SCORE.innerHTML = `Score: ${scor}`
+    
     
     boundaries.forEach(boundary => {
         boundary.draw()
