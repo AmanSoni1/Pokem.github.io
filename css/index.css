@@ -1,13 +1,13 @@
-canvas {
-    position: relative;
-}
 body {
     position: fixed;
     top: 10%;
     left: 15%;
 }
+canvas {
+    position: relative;
+}
+
 .up2 {
-/*     display: none; */
     position:absolute;
     top: 350px;
     right: 0;
@@ -19,7 +19,6 @@ body {
     border-radius: 50%;
 }
 .down2 {
-/*     display: none; */
     position:absolute;
     top: 450px;
     right: 0;
@@ -31,7 +30,6 @@ body {
     border-radius: 50%;
 }
 .left2 {
-/*     display: none; */
     position: absolute;
     top: 400px;
     right: 0;
@@ -43,7 +41,6 @@ body {
     border-radius: 50%;
 }
 .right2 {
-/*     display: none; */
     position: absolute;
     top: 400px;
     right: 0;
@@ -55,7 +52,6 @@ body {
     border-radius: 50%;
 }
 .fist {
-/*     display: none; */
     position: absolute;
     top: 400px;
     right: 0;
@@ -67,7 +63,6 @@ body {
     border-radius: 50%;
 }
 .sprint {
-/*     display: none; */
     position: absolute;
     top: 450px;
     right: 0;
