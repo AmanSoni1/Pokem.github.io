@@ -3,15 +3,10 @@ body {
     top: 10%;
     left: 15%;
 }
-#head {
-    display: inline-block;
-    position: absolute;
-    top: -15px;
-}
 #score {
     position: absolute;
     top: -10px;
-    left: 70px;
+    left: 0px;
 }
 #won {
     text-align: center;
