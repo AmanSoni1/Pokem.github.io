@@ -305,7 +305,7 @@ function animate(){
     }
     window.requestAnimationFrame(animate)   //recursion
     background.draw();
-    SCORE.innerHTML = `SCORE: {$scor}`
+    SCORE.innerHTML = `Score: ${scor}`
     
     boundaries.forEach(boundary => {
         boundary.draw()
