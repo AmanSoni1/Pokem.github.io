@@ -3,7 +3,7 @@ body {
     top: 10%;
     left: 15%;
 }
-h2 {
+#head {
     display: inline-block;
     position: absolute;
     top: -15px;
