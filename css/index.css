@@ -9,7 +9,7 @@ canvas {
 
 .up2 {
     position:absolute;
-    top: 350px;
+    top: 290px;
     right: 0;
     bottom: 0;
     left: 100px;
@@ -17,10 +17,12 @@ canvas {
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2); 
+    font-size: x-large;
 }
 .down2 {
     position:absolute;
-    top: 450px;
+    top: 460px;
     right: 0;
     bottom: 0;
     left: 100px;
@@ -28,32 +30,38 @@ canvas {
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2); 
+    font-size: x-large;
 }
 .left2 {
     position: absolute;
-    top: 400px;
+    top: 380px;
     right: 0;
     bottom: 0;
-    left: 50px;
+    left: 20px;
     padding: 0;
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2);  
+    font-size: x-large;
 }
 .right2 {
     position: absolute;
-    top: 400px;
+    top: 380px;
     right: 0;
     bottom: 0;
-    left: 150px;
+    left: 180px;
     padding: 0;
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2); 
+    font-size: x-large;
 }
 .fist {
     position: absolute;
-    top: 400px;
+    top: 350px;
     right: 0;
     bottom: 0;
     left: 900px;
@@ -61,18 +69,23 @@ canvas {
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2); 
+    font-size: xxx-large;
 }
 .sprint {
     position: absolute;
     top: 450px;
     right: 0;
     bottom: 0;
-    left: 850px;
+    left: 810px;
     padding: 0;
     border: 0;
     touch-action: none;
     border-radius: 50%;
+    background-color: rgba(0, 0,0, 0.2); 
+    font-size: xx-large;
 }
+
 
 /* @media screen and (min-width: 1550px) {
     body {
