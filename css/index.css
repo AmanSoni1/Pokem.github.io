@@ -1,5 +1,6 @@
 
 .up2 {
+    display: none;
     position:fixed;
     top: 350px;
     right: 0;
@@ -11,6 +12,7 @@
     border-radius: 50%;
 }
 .down2 {
+    display: none;
     position: fixed;
     top: 450px;
     right: 0;
@@ -22,6 +24,7 @@
     border-radius: 50%;
 }
 .left2 {
+    display: none;
     position: fixed;
     top: 400px;
     right: 0;
@@ -33,6 +36,7 @@
     border-radius: 50%;
 }
 .right2 {
+    display: none;
     position: fixed;
     top: 400px;
     right: 0;
@@ -44,6 +48,7 @@
     border-radius: 50%;
 }
 .fist {
+    display: none;
     position: fixed;
     top: 350px;
     right: 0;
@@ -55,6 +60,7 @@
     border-radius: 50%;
 }
 .sprint {
+    display: none;
     position: fixed;
     top: 400px;
     right: 0;
@@ -64,4 +70,45 @@
     border: 0;
     touch-action: none;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 2500px) {
+    body {
+        position: absolute;
+        top: 28%;
+        left: 28%
+    }
+    /* #di {
+        display: none;
+    } */
+    .up2{
+        display: inline-block;
+        top:750px;
+        left:700px;
+    }
+    .down2{
+        display: inline-block;
+        top:850px;
+        left:700px;
+    }
+    .left2{
+        display: inline-block;
+        top:800px;
+        left:650px;
+    }
+    .right2{
+        display: inline-block;
+        top:800px;
+        left:750px;
+    }
+    .sprint{
+        display: inline-block;
+        top:840px;
+        left:1390px;
+    }
+    .fist{
+        display: inline-block;
+        top:790px;
+        left:1450px;
+    }
 }
